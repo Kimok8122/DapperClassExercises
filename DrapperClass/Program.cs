@@ -17,8 +17,10 @@ namespace DrapperClass
                 .Build();
 
             string connString = config.GetConnectionString("DefaultConnection");
+
             IDbConnection conn = new MySqlConnection(connString);
 
+            var repo = new DapperDepartmentRepository(conn);
 
         }
     }
