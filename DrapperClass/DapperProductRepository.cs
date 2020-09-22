@@ -22,8 +22,8 @@ namespace DrapperClass
 
             public void InsertProducts(string newProductName, double price, int categoryID)
         {
-            _connection.Execute("INSERT INTO PRODUCTS (Name, Price, CategoryID) VALUES (@productName, @price, @categoryID);",
-            new { productName = newProductName, price = price, categoryID = categoryID });
+            _connection.Execute("INSERT INTO PRODUCTS (Name, Price, CategoryID) VALUES (@Name, @price, @categoryID);",
+            new {Name = newProductName, price = price, categoryID = categoryID });
         }
 
 
